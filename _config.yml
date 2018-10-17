@@ -1,0 +1,7 @@
+theme: jekyll-theme-minimal
+title: Ryan Zembrodt on GitHub
+description: Information on projects Ryan Zembrodt is currently working on or has worked on in the past.
+google_analytics: UA-59221711-1
+port: 4001
+repository: zembrodt/zembrodt.github.io
+logo: assets/imgs/logo.png

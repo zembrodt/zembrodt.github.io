@@ -1,25 +1,83 @@
-<html>
-<head>
-	<title>{{ page.title }}</title>
-</head>
-<body>
-	<div id="header">
-		<p><a href="index.html">Home</a> | <a href="projects.html">Projects</a> | <a href="blog.html">Blog</a> | <a href="about.html">About Me</a></p>
-		<h1>Ryan Zembrodt on Github</h1>
-	</div>
-	<div id="content">
-		{{ content }}
-	</div>
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+  </head>
+  <body>
+    <div id="wrapper">
+		{% if site.logo %}
+		<div id="header-logo">
+		  <img src="{{site.logo | relative_url}}" alt="Logo" width="200px" />
+		</div>
+		{% endif %}
+		<div>
+			<h1><a href="{{ "https://github.com/zembrodt" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+		</div>
+		<div>
+			<h2>
+				{% if page.title != "Home" %}
+				<a href="index.html">
+				{% endif %}
+				Home
+				{% if page.title != "Home" %}
+				</a>
+				{% endif %}
+				<span id="menu-separator">
+					&nbsp;|&nbsp;
+				</span>
+				{% if page.title != "Projects" %}
+				<a href="projects.html">
+				{% endif %}
+				Projects
+				{% if page.title != "Projects" %}
+				</a>
+				{% endif %}
+				<span id="menu-separator">
+					&nbsp;|&nbsp;
+				</span>
+				{% if page.title != "About Me" %}
+				<a href="about.html">
+				{% endif %}
+				About
+				{% if site.title != "About Me" %}
+				</a>
+				{% endif %}
+			</h2>
+		</div>
+		<div id="content">
+		  {{ content }}
+		</div>
+	  <footer id="footer">
+		<hr />
+		<div id="footer-content">
+			{% if site.github.is_project_page %}
+			<p>This site is maintained by <a href="{{ site.github.owner_url }}">Ryan Zembrodt</a> | <a href="http://www.linkedin.com/in/ryanzembrodt" target="_blank">LinkedIn</a></p>
+			{% endif %}
+			<p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+		</div>
+		<div id="footer-content-2">
+			{% if site.github.is_project_page %}
+			<p class="view"><a href="{{ site.github.repository_url }}">View the GitHub Pages project <small>{{ site.github.repository_nwo }}</small></a></p>
+			{% endif %}
+		</div>
+	  </footer>
+    </div>
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    {% if site.google_analytics %}
 	<!-- Google Analytics -->
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-59221711-1', 'auto');
-	  ga('send', 'pageview');
-
-	</script>
-</body>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', '{{ site.google_analytics }}', 'auto');
+      ga('send', 'pageview');
+    </script>
+    {% endif %}
+  </body>
 </html>

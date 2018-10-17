@@ -1,0 +1,56 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+#wrapper {
+	width: 960px;
+	min-height: 100%;
+	height: auto !important;
+	margin: 0 auto;
+	margin-bottom: -50px;
+}
+
+#wrapper:after {
+	content: "";
+	display:block;
+	height: 50px;
+}
+
+#header-logo {
+	display: inline-block;
+	float: right;
+}
+
+#menu-separator {
+	color: #727272;
+	font-weight: 400;
+}
+
+#content {
+	height: 100%;
+}
+
+#content:after {
+	content: "";
+	display:block;
+	height: 50px;
+}
+
+#footer {
+	height: 50px;
+	width: 960px;
+	position:relative;
+}
+
+#footer-content {
+	height: 32px;
+	padding: 8px;
+	float: left;
+}
+
+#footer-content-2 {
+	height: 32px;
+	padding: 8px;
+	float: right;
+}
