@@ -1,51 +1,73 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: 'en-US' }}">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+			-->
 {% seo %}
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
   <body>
     <div id="wrapper">
 		{% if site.logo %}
 		<div id="header-logo">
-		  <img src="{{site.logo | relative_url}}" alt="Logo" width="200px" />
+		  <img src="https://avatars3.githubusercontent.com/u/10450495" alt="Logo" class="profile-pic" />
 		</div>
 		{% endif %}
 		<div>
-			<h1><a href="{{ "https://github.com/zembrodt" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+			<h1><a href="{{ site.github.owner_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
 		</div>
 		<div>
 			<h2>
 				{% if page.title != "Home" %}
-				<a href="index.html">
+					<a href="index.html">
 				{% endif %}
 				Home
 				{% if page.title != "Home" %}
-				</a>
+					</a>
 				{% endif %}
 				<span id="menu-separator">
 					&nbsp;|&nbsp;
 				</span>
 				{% if page.title != "Projects" %}
-				<a href="projects.html">
+					<a href="projects.html">
 				{% endif %}
 				Projects
 				{% if page.title != "Projects" %}
-				</a>
+					</a>
+				{% endif %}
+				<span id="menu-separator">
+					&nbsp;|&nbsp;
+				</span>
+				{% if page.title != "Work Experience" %}
+					<a href="work.html">
+				{% endif %}
+				Work Experience
+				{% if page.title != "Work Experience" %}
+					</a>
+				{% endif %}
+				<span id="menu-separator">
+					&nbsp;|&nbsp;
+				</span>
+				{% if page.title != "Coursework" %}
+					<a href="coursework.html">
+				{% endif %}
+				Coursework
+				{% if page.title != "Coursework" %}
+					</a>
 				{% endif %}
 				<span id="menu-separator">
 					&nbsp;|&nbsp;
 				</span>
 				{% if page.title != "About Me" %}
-				<a href="about.html">
+					<a href="about.html">
 				{% endif %}
 				About
 				{% if site.title != "About Me" %}
-				</a>
+					</a>
 				{% endif %}
 			</h2>
 		</div>
@@ -55,7 +77,12 @@
 	  <footer id="footer">
 		<hr />
 		<div id="footer-content">
-			<p>This site is maintained by <a href="{{ site.github.owner_url }}">Ryan Zembrodt</a> | <a href="http://www.linkedin.com/in/ryanzembrodt" target="_blank">LinkedIn</a></p>
+			<p>
+				This site is maintained by
+				<a href="{{ site.github.owner_url }}">Ryan Zembrodt</a>&nbsp;|&nbsp;
+				<a href="http://www.linkedin.com/in/ryanzembrodt" target="_blank">LinkedIn</a>&nbsp;|&nbsp;
+				<a href="assets/docs/ryan-zembrodt-resume.pdf" target="_blank">Resume</a>
+			</p>
 			<p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
 		</div>
 		<div id="footer-content-2">

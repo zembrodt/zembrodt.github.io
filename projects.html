@@ -2,35 +2,94 @@
 layout: master
 title: Projects
 ---
+<h2>Django Home <small>(name TBD)</small></h2>
+<p>
+    In the process of learning the Django framework and also launching a web application to production.<br/>
+    This project allows users to create an account to create their own "Dashboards". A "Dashboard" is composed of modules
+    the user selects and modifies the settings of.<br/>
+    Currently available modules include:
+</p>
+<ul>
+    <li>Datetime</li>
+    <li>Forecast</li>
+    <li>Photos</li>
+    <li>Weather</li>
+</ul>
+<p>
+    The user can add and remove modules from their dashboard, and can update their positions on the screen with drag-and-drop
+    functionality, or buttons to update their z-index. The goal is when viewing their dashboard, a user can fullscreen the webpage
+    (F11 in Google Chrome, for instance) and let the page sit on the screen. This can be used on a non-primary display (such as
+    an unused monitor, tablet, or television) with images and information displayed that the user customized.<br/>
+    Future updates include:
+</p>
+<ul>
+    <li>Better dashboard editing functionality</li>
+    <li>More modules, such as Twitter or news feeds, traffic updates, etc</li>
+    <li>Multiple dashboards per user, useful for different displays</li>
+    <li>Ability to share dashboards with other users</li>
+    <li>Stock or user-uploaded public images other users can choose from instead of only their own images</li>
+    <li>Save module positions relative to the current screen rather than their exact top/left css values</li>
+</ul>
+<p>
+    The project can be found at <a href="https://github.com/zembrodt/django-home">django-home</a>.<br/>
+    The latest stable production version is deployed at <a href="https://djangohome.herokuapp.com">djangohome.herokuapp.com</a>,
+    try it for yourself!
+</p>
 
-<strong>Fall 2018:</strong>
-<p>Working on an independent study with Dr. Harrison on story generation using Sequence-to-sequence networks.<br/>
-The project can be found at <a href="https://github.com/zembrodt/story-generation">story-generation</a>.<br/>
-The project's final report can be found <a href="assets/docs/cs612-final-report.pdf" >here</a>.</p>
-<p>Developed a Python implementation of <a href="https://en.wikipedia.org/wiki/METEOR">METEOR</a> for the project.<br/>
-Its repository can be found at <a href="https://github.com/zembrodt/pymeteor">PyMETEOR</a>.</p>
-<p>Working on a software engineering project for generating test case reports after Jenkins builds.<br/>
-The project site can be found at <a href="https://cs685-2018.github.io">cs685-2018.github.io</a>.<br/>
-The project's main repository is at <a href="https://github.com/cs685-2018">github.com/cs685-2018</a>.</p>
-<p>Working on a large-scale data science project for pre-processing large amounts of text with Hadoop MapReduce using Python.<br/>
-The project's repository can be found at <a href="https://github.com/cs626-2018/sentence-preprocessing">github.com/cs626-2018/sentence-preprocessing</a>.</p>
-<p>Currently tutoring Computer Science for Tau Beta Pi.</p>
-<strong>Spring 2018:</strong>
-<p>Took courses on machine learning, database systems, and models of computation.</p>
-<p>Grader for the Intro to Operating Systems course.</p>
-<strong>Fall 2017:</strong>
-<p>Took an algorithms, distributed Operating Systems, and programming languages courses.</p>
-<p>Developed a chat app in Go for the programming languages course. The project page can be found at <a href="https://github.com/zembrodt/gochat">zembrodt/gochat</a>.
-<p>Worked part time as a web developer at Valvoline in Lexington, KY.</p>
-<strong>Spring 2016:</strong>
-<p>Worked on a machine learning senior design project. The GitHub repository for the project can be found <a href="https://github.com/cafe-predicting">here</a>, and the project webpage can be found at <a href="http://cafe-predicting.github.io/">cafe-predicting.github.io</a>.</p>
-<strong>Fall 2015:</strong>
-<p>Worked with different algorithms for an Artificial Intelligence class. Highlight was creating an AI to traverse a game's maze in order to find a key for a locked door (if needed) and the sword to kill the boss.</p>
-<p>Worked with several C-based projects for a systems programming class with Linux. Developed a basic shell to execute programs with in/out streams and handle the loading and execution of user pluggins.</p>
-<strong>Summer 2015:</strong>
-<p>Studied abroad in Germany. No projects.</p>
-<strong>Spring 2015:</strong>
-<p>I was working on a couple personal projects having to do with 2D Game development with C++.
-I've uploaded some somewhat recent code for one of them, although nowhere near complete, and it can be
-viewed on my Github <a href="https://github.com/zembrodt/simple-game-engine">here</a>.</p>
-<p>I created a store catalog site using PHP and MySQL for my databases class. I plan on uploading the project to Github once I clean up the code.</p>
+<h2>Story Generation <small>(Master's Project)</small></h2>
+<p>
+    Project began as an independent study with Dr. Brent Harrison at UK during my Fall 2018 semester. Goal is to generate
+    sentences using a sequence-to-sequence network. The project for this independent study can be found at
+    <a href="https://github.com/zembrodt/story-generation">story-generation</a>.<br/>
+    The independent study's final report can be found <a href="assets/docs/cs612-final-report.pdf" >here</a>.
+</p>
+<p>
+    Currently this semester I am continuing this project for my Master's project by using a hierarchical recurrent
+    encoder-decoder. <br/>
+    The project for this can be found at <a href="https://github.com/zembrodt/hred-story-generation">hred-story-generation</a>.
+</p>
+
+<h2>Jenkins Test Selection Plugin</h2>
+<p>
+    Worked on a software engineering group project for class that selects test cases after Jenkins builds.<br/>
+    Project was developed using Java as a plugin for Jenkins and used 3rd party tools including:
+</p>
+<ul>
+    <li><a href="http://lucene.apache.org/">Apache Lucene</a></li>
+    <li><a href="https://wiki.jenkins.io/display/JENKINS/Last+Changes+Plugin">Jenkins Last Changes Plugin</a></li>
+    <li><a href="http://javaparser.org/">JavaParser</a></li>
+    <li><a href="https://github.com/thombergs/diffparser">Diffparser</a></li>
+    <li><a href="https://maven.apache.org/shared/maven-invoker/">Apache Maven Invoker</a></li>
+</ul>
+<p>
+    The plugin's code can be found at <a href="https://github.com/cs685-2018/test-selection">github.com/cs685-2018/test-selection</a>,
+    and the project's main repository is at <a href="https://github.com/cs685-2018">github.com/cs685-2018</a>.
+</p>
+
+<h2>Large Scale Sentence Pre-processing</h2>
+<p>
+    Worked on a data science group project for class to pre-process large amounts of natural language text with Hadoop MapReduce
+    using Python scripts. The project's goal was to process a large amount of the NL text into in-order sentences as they are
+    found within their respective texts. Use case for this project is to pre-process data that is then meant to be used for other
+    projects such as machine learning.<br/>
+    The project's repository can be found at <a href="https://github.com/cs626-2018/sentence-preprocessing">github.com/cs626-2018/sentence-preprocessing</a>.</p>
+</p>
+
+<h2>PyMETEOR</h2>
+<p>
+    Developed a Python implementation of <a href="https://en.wikipedia.org/wiki/METEOR">METEOR</a> for the story-generation project.<br/>
+    Its repository can be found at <a href="https://github.com/zembrodt/pymeteor">PyMETEOR</a>.
+</p>
+
+<h2>Gochat</h2>
+<p>
+    Developed a chat app in Go for my programming languages course at UK.<br/>
+    The project page can be found at <a href="https://github.com/zembrodt/gochat">zembrodt/gochat</a>.
+</p>
+
+<h2>Cafe-Predicting <small>(Senior Design Project)</small></h2>
+<p>
+    Worked on a machine learning senior design project.
+    The GitHub repository for the project can be found at <a href="https://github.com/cafe-predicting">cafe-predicting</a><br/>
+    The project webpage can be found at <a href="http://cafe-predicting.github.io/">cafe-predicting.github.io</a>.
+</p>
